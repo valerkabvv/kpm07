@@ -28,9 +28,11 @@ public:
 		pq.set_value(s, 0);
 		while (!pq.isEmpty())
 		{
-			int v = pq.get_min();
-			for (vector<edge>::iterator it = gr.adjency_to(v).begin(); it != gr.adjency_to(v).end(); it++)
+			int v = pq.get_del_min();
+			vector<edge> vec = gr.adjency_to(v);
+			for (vector<edge>::iterator it = vec.begin(); it != vec.end(); it++)
 				relax(*it);
 		}
 	}
+	double get_dist(int n) { return dist_to[n]; }
 };

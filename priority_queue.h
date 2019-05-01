@@ -25,6 +25,11 @@ public:
 				min_indx = i;
 			}
 		}
+		return min_indx;
+	}
+
+	int get_del_min() {
+		int min_indx = this->get_min();
 		if (min_indx != -1) {
 			cont[min_indx] = MAX_DOUBLE;
 		}
