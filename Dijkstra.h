@@ -6,8 +6,8 @@
 
 class DijkstraSP {
 private:
-	edge* edge_to;
-	double* dist_to;
+    vector<edge> edge_to;
+    vector<double> dist_to;
 	priority_queue pq;
 
 	void relax(edge e) {
@@ -20,8 +20,8 @@ private:
 	}
 public:
 	DijkstraSP(weighted_digraph gr, int s):pq(gr.get_v()) {
-		edge_to = new edge[gr.get_v()];
-		dist_to = new double[gr.get_v()];
+        edge_to = vector<edge>(gr.get_v());
+        dist_to = vector<double>(gr.get_v());
 		for (int i = 0; i < gr.get_v(); i++)
 			dist_to[i] = MAX_DOUBLE;
 		dist_to[s] = 0;

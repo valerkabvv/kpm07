@@ -6,7 +6,7 @@ private:
 	int v, w;
 	double weight;
 public:
-	edge(int a= NULL,int b=NULL,double c=NULL):v(a),w(b),weight(c){}
+    edge(int a= 0,int b=0,double c=0):v(a),w(b),weight(c){}
 
 	int from() { return v; }
 

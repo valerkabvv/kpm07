@@ -1,3 +1,0 @@
-﻿  Source.cpp
-c:\users\lenovo\source\repos\kp7\kp7\edge.h(15): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  kp7.vcxproj -> C:\Users\Lenovo\source\repos\kp7\Debug\kp7.exe
